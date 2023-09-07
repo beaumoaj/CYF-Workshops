@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="My Github Search form" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <form action="https://github.com/search" method="get"></form>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="My Github Search form" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <form action="https://github.com/search" method="get">
+    <fieldset>
+      <legend>Github Search Form</legend>
+      <p>
+        <input type="text" name="q" id="query" />
+        <label for="q">Enter your search query</label>
+      </p>
+      <p>
+        <select name="type" id="type">
+          <option value="code">Code</option>
+          <option value="repositories" selected>Repositories</option>
+        </select>
+      </p>
+      <p>
+        <input type="radio" id="stars" name="s" value="stars" checked />
+        <label for="stars">Stars</label>
+      </p>
+      <p>
+        <input type="radio" id="forks" name="s" value="forks" />
+        <label for="forks">Forks</label>
+      </p>
+      <p>
+        <input type="radio" id="updated" name="s" value="updated" />
+        <label for="updated">Updated</label>
+      </p>
+      <p>
+        <select name="o" id="sort_order">
+          <option value="asc">Ascending</option>
+          <option value="desc" selected>Descending</option>
+        </select>
+      </p>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+</body>
+
 </html>
